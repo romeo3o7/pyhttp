@@ -4,13 +4,11 @@ import sys
 import requests
 import xml.etree.ElementTree as ET
 
-# ---- fill these in ----
 HOST = "172.16.17.1:8090"
-USERNAME = "vip"
-PASSWORD = "0987654321"          
+USERNAME = input("Enter the Username:  ")
+PASSWORD = input("Enter the password:  ")
 PRODUCTTYPE = 0                  
 LIVE_INTERVAL_SEC = 150          
-# ------------------------
 
 BASE = f"http://{HOST}"
 session = requests.Session()
