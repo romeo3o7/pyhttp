@@ -2,11 +2,13 @@ import time
 import signal
 import sys
 import requests
+import getpass
 import xml.etree.ElementTree as ET
 
 HOST = "172.16.17.1:8090"
 USERNAME = input("Enter the Username:  ")
-PASSWORD = input("Enter the password:  ")
+print(f"hello {USERNAME}, note: password is not printed for security reasons")
+PASSWORD = getpass.getpass("Enter the password:  " , stream=None)
 PRODUCTTYPE = 0                  
 LIVE_INTERVAL_SEC = 150          
 
